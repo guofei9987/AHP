@@ -32,7 +32,7 @@ class AHP:
             warnings.warn('无法准确判断一致性')
         else:
             CI = (max_eigen - n) / (n - 1)
-            CR = CI / self.RI[n]
+            CR = CI / self.RI[n - 1]
         return max_eigen, CR, eigen
 
     def run(self):
